@@ -21,26 +21,26 @@ The Employee will receive the assigned work with the help of this system. In the
 #### DB Connections
 
 ```php
-	<?php
-        $servername="localhost";
-        $username="root";
-        $password="";
-        $dbname="projectepa";
+<?php
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $dbname="projectepa";
 
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        //echo "Connected successfully";
-    ?>
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    //echo "Connected successfully";
+?>
 ```
 
 #### DB file
 
-[projectepa](./sql/projectepa.sql) 
+DB file for the project is included in sql folder: [SQL File](./sql/projectepa.sql) 
 
 
 ## ScreenShots
