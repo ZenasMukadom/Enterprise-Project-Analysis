@@ -1,12 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <?php
 session_start();
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="projectepa";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include_once 'includes/dbConnect.php';
 
 //echo("connection");
 if(isset($_POST ['Login'])) {

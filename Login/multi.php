@@ -1,11 +1,7 @@
 <!doctype html>
 <?php
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="projectepa";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-echo("conneciton");
+include_once '../includes/dbConnect.php';
+
 if(isset($_REQUEST['Login'])){
 $user=$_REQUEST['user'];
 $pass = $_REQUEST['pass'];

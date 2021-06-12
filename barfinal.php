@@ -1,9 +1,8 @@
 <?php
-
-$con = mysqli_connect("localhost","root","","projectepa");
+include_once 'includes/dbConnect.php';
 
 $query="SELECT `Projectdate`, `Projectperc` FROM `project` ORDER BY `Projectdate` desc";
-$result=mysqli_query($con,$query);
+$result=mysqli_query($conn,$query);
 
 
 ?>

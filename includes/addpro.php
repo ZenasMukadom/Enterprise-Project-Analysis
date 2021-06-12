@@ -1,6 +1,5 @@
 <?php
-
-$con = mysqli_connect("localhost","root","","projectepa");
+include_once 'dbConnect.php';
 
 $Proid=$_POST['pid'];
 $Proname=$_POST['proname'];
@@ -16,7 +15,7 @@ $Proday=$_POST['prodobday'];
 $Promonth=$_POST['prodobmonth'];
 $Proyear=$_POST['prodobyear'];
 $prodate=$Proyear . '-' . $Promonth . '-' . $Proday;
-$datepro = mysqli_real_escape_string($con,$prodate);
+$datepro = mysqli_real_escape_string($conn,$prodate);
 */
 
 $TProid=$_POST['tpid'];
@@ -32,14 +31,12 @@ $Taskenddate=$_POST['taskend'];
     $Tdeadline2=$_POST['deadline2'];
     $Tdeadlinecomp2=$_POST['deadlinecomp2'];
 
-
-$Taskday=$_POST['taskdobday'];
-$Taskmonth=$_POST['taskdobmonth'];
-$Taskyear=$_POST['taskdobyear'];
-$Taskdate=$Taskyear . '-' . $Taskmonth . '-' . $Taskday;
-$datetask = mysqli_real_escape_string($con,$Taskdate);
+    $Taskday=$_POST['taskdobday'];
+    $Taskmonth=$_POST['taskdobmonth'];
+    $Taskyear=$_POST['taskdobyear'];
+    $Taskdate=$Taskyear . '-' . $Taskmonth . '-' . $Taskday;
+    $datetask = mysqli_real_escape_string($conn,$Taskdate);
 */
-
 
 $STProid=$_POST['spid'];
 $STaskid=$_POST['stid'];
@@ -47,7 +44,6 @@ $Subid=$_POST['sid'];
 $Subname=$_POST['subtaskname'];
 $Subavg=$_POST['subavg'];
 $Subemp=$_POST['sempid'];
-
 
 
 $querypro="INSERT INTO `project`(`projectname`, `projectid`, `projectdesc`, `projectleader`, `projectcompletionaverage`, `startdate`, `enddate`) 
@@ -59,11 +55,9 @@ VALUES ('$TProid','$Taskname','$Taskid','$Taskavg','$Taskstartdate','$Taskenddat
 $querysub="INSERT INTO `subtask`(`projectid`, `taskid`, `subtaskid`, `subtaskname`, `empid`, `subtaskcompletionaverage`) 
 VALUES ('$STProid','$STaskid','$Subid','$Subname','$Subemp','$Subavg')";
 
+$run1=mysqli_query($conn,$querypro);
+$run2=mysqli_query($conn,$querytask);
+$run3=mysqli_query($conn,$querysub);
 
-$run1=mysqli_query($con,$querypro);
-$run2=mysqli_query($con,$querytask);
-$run3=mysqli_query($con,$querysub);
-
-
-
+header("Location:../projects.html");
 ?>

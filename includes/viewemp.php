@@ -1,9 +1,8 @@
 <?php
-
-$con = mysqli_connect("localhost","root","","projectepa");
+include_once 'dbConnect.php';
 
 $query="SELECT * FROM `employee`";
-$run=mysqli_query($con,$query);
+$run=mysqli_query($conn,$query);
 ?>
 
 <?php

@@ -1,14 +1,14 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost","root","","projectepa");
+include_once 'includes/dbConnect.php';
 $user=$_SESSION["user"];
 $selectuser="SELECT * from employee where `Username`='$user'";
-$userresult=mysqli_query($con,$selectuser);
+$userresult=mysqli_query($conn,$selectuser);
 $row1=mysqli_fetch_array($userresult);
 $id=$row1['empid'];
 
 $query="SELECT * FROM `subtask` WHERE `empid`='$id'";
-$run=mysqli_query($con,$query);
+$run=mysqli_query($conn,$query);
 
 
 if(isset($_POST['update'])){
@@ -20,29 +20,29 @@ if(isset($_POST['update'])){
     #Update Subtask
     $updatequery="UPDATE `subtask` SET `subtaskcompletionaverage`='$Avgcomp' WHERE `projectid`='$Proid' AND 
     `taskid`='$Taskid' AND `subtaskid`='$Subid'";
-    $resultup=mysqli_query($con,$updatequery);
+    $resultup=mysqli_query($conn,$updatequery);
 
     #Update Task
     $queryperc1="SELECT SUM(subtaskcompletionaverage) AS totalsum
     FROM `subtask` WHERE  projectid='$Proid' and taskid='$Taskid'";
-    $resultperc=mysqli_query($con,$queryperc1);
+    $resultperc=mysqli_query($conn,$queryperc1);
     $rowperc1=mysqli_fetch_array($resultperc);
     $taskperc1=$rowperc1['totalsum'];
 
     $updatetask="UPDATE `task` SET `taskcompletionaverage`='$taskperc1'WHERE  projectid='$Proid' and taskid='$Taskid' ";
-    $updatetaskresult=mysqli_query($con,$updatetask);
+    $updatetaskresult=mysqli_query($conn,$updatetask);
 
 
     #Update Project
     $queryperc2="SELECT SUM(taskcompletionaverage) AS totalsum
     FROM `task` WHERE  projectid='$Proid'";
-    $resultperc2=mysqli_query($con,$queryperc2);
+    $resultperc2=mysqli_query($conn,$queryperc2);
     $rowperc2=mysqli_fetch_array($resultperc2);
     $projectperc2=$rowperc2['totalsum'];
 
 
     $updateproject="UPDATE `project` SET `projectcompletionaverage`='$projectperc2'WHERE  projectid='$Proid'";
-    $updateprojectresult=mysqli_query($con,$updateproject);
+    $updateprojectresult=mysqli_query($conn,$updateproject);
 }
 
 ?>

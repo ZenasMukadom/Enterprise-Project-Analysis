@@ -1,19 +1,14 @@
-
 <?php
-
-$con = mysqli_connect("localhost","root","","projectepa");
+include_once 'includes/dbConnect.php';
 
 $query="SELECT * FROM `project`";
-$run=mysqli_query($con,$query);
+$run=mysqli_query($conn,$query);
 
 $query1="SELECT * FROM `task`";
-$run1=mysqli_query($con,$query1);
+$run1=mysqli_query($conn,$query1);
 
 $query2="SELECT * FROM `subtask`";
-$run2=mysqli_query($con,$query2);
-
-
-
+$run2=mysqli_query($conn,$query2);
 
 
 if(isset($_POST['replace'])){
@@ -22,10 +17,9 @@ if(isset($_POST['replace'])){
     $Subid=$_POST['subid'];
     $Newemp=$_POST['empid2'];
 
-
     $replacequery="UPDATE `subtask` SET `empid`='$Newemp' WHERE `projectid`='$Proid' AND 
     `taskid`='$Taskid' AND `subtaskid`='$Subid'";
-    $resultup=mysqli_query($con,$replacequery);
+    $resultup=mysqli_query($conn,$replacequery);
 
 }
 
@@ -34,9 +28,9 @@ if(isset($_POST['delete'])){
     $deletequerypro=" DELETE FROM `project` WHERE `projectid`='$Proid'";
     $deletequerytask=" DELETE FROM `task` WHERE `projectid`='$Proid'";
     $deletequerysub=" DELETE FROM `subtask` WHERE `projectid`='$Proid'";
-    $resultup1=mysqli_query($con,$deletequerypro);
-    $resultup2=mysqli_query($con,$deletequerytask);
-    $resultup3=mysqli_query($con,$deletequerysub);
+    $resultup1=mysqli_query($conn,$deletequerypro);
+    $resultup2=mysqli_query($conn,$deletequerytask);
+    $resultup3=mysqli_query($conn,$deletequerysub);
 
 }
 
@@ -54,15 +48,12 @@ if(isset($_GET['insert'])){
     $insertquery="INSERT INTO `task`(`deadline1`,`deadlinecomp1`,`deadline2`,`deadlinecomp2`) 
     VALUES ('$Tdeadline1','$Tdeadlinecomp1','$Tdeadline2','$Tdeadlinecomp2') WHERE `projectid`='$Proid1' AND 
     `taskid`='$Taskid1'";
-    $resultup1=mysqli_query($con,$insertquery);
+    $resultup1=mysqli_query($conn,$insertquery);
 
 }
 */
 
 ?>
-
-
-
 
 <html lang="en">
 
@@ -544,10 +535,6 @@ if(isset($_GET['insert'])){
                         </div>
                     </div>
 
-
-
-
-
                 </div>
             </div>
         </div>
@@ -576,7 +563,6 @@ if(isset($_GET['insert'])){
 
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src="js/employee.js"></script>
-
 
 
 </html>

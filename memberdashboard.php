@@ -1,24 +1,24 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost","root","","projectepa");
+include_once 'includes/dbConnect.php';
 
 #Session for particular User
 $user=$_SESSION["user"];
 $selectuser="SELECT * from employee where `Username`='$user'";
-$userresult=mysqli_query($con,$selectuser);
+$userresult=mysqli_query($conn,$selectuser);
 $row1=mysqli_fetch_array($userresult);
 $id=$row1['empid'];
 
 #subtaskcompletionaverage Value 
 $query="SELECT subtaskcompletionaverage FROM `subtask` WHERE `empid`='$id'";
-$run=mysqli_query($con,$query);
+$run=mysqli_query($conn,$query);
 $row=mysqli_fetch_array($run);
 $subtask=$row['subtaskcompletionaverage'];
 //echo "$subtask";
 
 #Subtask name
 $query2="SELECT subtaskname FROM `subtask` WHERE `empid`='$id'";
-$run2=mysqli_query($con,$query2);
+$run2=mysqli_query($conn,$query2);
 $row1=mysqli_fetch_array($run2);
 $subtaskname=$row1['subtaskname'];
 //echo "$subtaskname";
