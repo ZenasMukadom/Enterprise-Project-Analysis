@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/dbConnect.php';
+require 'includes/dbConnect.php';
 
 $query="SELECT * FROM `project`";
 $run=mysqli_query($conn,$query);

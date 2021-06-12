@@ -1,5 +1,5 @@
 <?php
-include_once 'dbConnect.php';
+require 'dbConnect.php';
 
 $Empid=$_POST['empid'];
 $Firstname=$_POST['empfirst'];

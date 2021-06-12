@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'includes/dbConnect.php';
+require 'includes/dbConnect.php';
 
 #Session for particular User
 $user=$_SESSION["user"];

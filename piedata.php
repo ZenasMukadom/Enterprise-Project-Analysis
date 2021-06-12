@@ -1,7 +1,7 @@
 <?php
 
 header('Content-Type:application/json');
-include_once 'includes/dbConnect.php';
+require 'includes/dbConnect.php';
 
 $query="SELECT `Taskid`, `Taskname`,`Taskperc` FROM `task` ORDER BY `Taskid`";
 $run=mysqli_query($conn,$query);

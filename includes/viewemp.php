@@ -1,5 +1,5 @@
 <?php
-include_once 'dbConnect.php';
+require 'dbConnect.php';
 
 $query="SELECT * FROM `employee`";
 $run=mysqli_query($conn,$query);

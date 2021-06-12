@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/dbConnect.php';
+require 'includes/dbConnect.php';
 
 $query="SELECT `Projectdate`, `Projectperc` FROM `project` ORDER BY `Projectdate` desc";
 $result=mysqli_query($conn,$query);

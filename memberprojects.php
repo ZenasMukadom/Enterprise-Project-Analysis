@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'includes/dbConnect.php';
+require 'includes/dbConnect.php';
 $user=$_SESSION["user"];
 $selectuser="SELECT * from employee where `Username`='$user'";
 $userresult=mysqli_query($conn,$selectuser);

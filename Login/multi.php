@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-include_once '../includes/dbConnect.php';
+require '../includes/dbConnect.php';
 
 if(isset($_REQUEST['Login'])){
 $user=$_REQUEST['user'];

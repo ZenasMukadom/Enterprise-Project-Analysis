@@ -1,5 +1,5 @@
 <?php
-include_once 'dbConnect.php';
+require 'dbConnect.php';
 
 $Proid=$_POST['pid'];
 $Proname=$_POST['proname'];

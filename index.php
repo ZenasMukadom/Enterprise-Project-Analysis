@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-include_once 'includes/dbConnect.php';
+require 'includes/dbConnect.php';
 
 //echo("connection");
 if(isset($_POST ['Login'])) {
