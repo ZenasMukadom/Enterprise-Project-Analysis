@@ -18,7 +18,7 @@ The Employee will receive the assigned work with the help of this system. In the
 
 ## Installation and Getting Started
 
-### DB Connections
+#### DB Connections
 
 ```php
 	<?php
@@ -37,6 +37,11 @@ The Employee will receive the assigned work with the help of this system. In the
         //echo "Connected successfully";
     ?>
 ```
+
+#### DB file
+
+[projectepa](./sql/projectepa.sql) 
+
 
 ## ScreenShots
 
