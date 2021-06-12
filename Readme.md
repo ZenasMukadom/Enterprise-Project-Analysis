@@ -23,8 +23,7 @@ The Employee will receive the assigned work with the help of this system. In the
 
 ### DB Connections
 
-[source,php,indent=0]
-----
+```php
 	<?php
         $servername="localhost";
         $username="root";
@@ -40,7 +39,7 @@ The Employee will receive the assigned work with the help of this system. In the
         }
         //echo "Connected successfully";       
     ?>
-----
+```
 
 
 
