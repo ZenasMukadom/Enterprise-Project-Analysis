@@ -163,7 +163,7 @@ $run=mysqli_query($conn,$query);
                                         <div class="col-sm-2">
                                                 <div class="form-group">
                                                     <label>Emp Id</label>
-                                                    <input type="text" class="form-control" name='empid'>
+                                                    <input type="text" class="form-control" name='empid' required>
                                                 </div>
                                             </div>
 
@@ -171,14 +171,14 @@ $run=mysqli_query($conn,$query);
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label>First Name</label>
-                                                    <input type="text" class="form-control" name='empfirst'>
+                                                    <input type="text" class="form-control" name='empfirst' required>
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label>Last Name</label>
-                                                    <input type="text" class="form-control" name="emplast">
+                                                    <input type="text" class="form-control" name="emplast" required>
                                                 </div>
                                             </div>
 
@@ -191,21 +191,21 @@ $run=mysqli_query($conn,$query);
                                                 <div class="form-group">
                                                     <label>User Name</label>
                                                     <input type="text" class="form-control" name="user"
-                                                        placeholder="Login name">
+                                                        placeholder="Login name" required>
                                                 </div> 
                                         </div>
                                         <div class="col-sm-2">
                                                 <div class="form-group">
                                                     <label>User Password</label>
                                                     <input type="text" class="form-control" name="pass"
-                                                        placeholder="Password">
+                                                        placeholder="Password" required>
                                                 </div> 
                                         </div>
                                         <div class="col-sm-2">
                                                 <div class="form-group">
                                                     <label>User Type</label>
                                                     <input type="text" class="form-control" name="usertype"
-                                                        placeholder="Type of user">
+                                                        placeholder="Type of user" required>
                                                 </div> 
                                         </div>
 
@@ -213,14 +213,14 @@ $run=mysqli_query($conn,$query);
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label>Designation</label>
-                                                    <input type="text" class="form-control" name="empdes">
+                                                    <input type="text" class="form-control" name="empdes" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label>Department</label>
-                                                    <input type="text" class="form-control" name="empdept">
+                                                    <input type="text" class="form-control" name="empdept" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,21 +229,21 @@ $run=mysqli_query($conn,$query);
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label>Email Id</label>
-                                                    <input type="text" class="form-control" name="empemail">
+                                                    <input type="text" class="form-control" name="empemail" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-2">
                                                 <div class="form-group">
                                                     <label>Salary</label>
-                                                    <input type="text" class="form-control" name="empsal">
+                                                    <input type="text" class="form-control" name="empsal" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label>Contact No.</label>
-                                                    <input type="text" class="form-control" name="empcont">
+                                                    <input type="text" class="form-control" name="empcont" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -253,19 +253,19 @@ $run=mysqli_query($conn,$query);
                                             <div class="col-sm-1">
                                                 <div class="form-group">
                                                     <label>Day</label>
-                                                    <input type="text" class="form-control" name="empdobday">
+                                                    <input type="text" class="form-control" name="empdobday" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-1">
                                                 <div class="form-group" title="Date of birth">
                                                     <label>Month</label>
-                                                    <input type="text" class="form-control" name="empdobmonth">
+                                                    <input type="text" class="form-control" name="empdobmonth" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-1">
                                                 <div class="form-group" title="Date of birth">
                                                     <label>Year</label>
-                                                    <input type="text" class="form-control" name="empdobyear">
+                                                    <input type="text" class="form-control" name="empdobyear" required>
                                                 </div>
                                             </div>
                                         </div>

@@ -241,25 +241,25 @@ if(isset($_POST['update'])){
                                                                                     <div class="col-md-2">
                                                                                         <div class="form-group">
                                                                                             <label>Project Id</label>
-                                                                                            <input type="text" class="form-control" name="upid">
+                                                                                            <input type="text" class="form-control" name="upid" required>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="col-md-2">
                                                                                         <div class="form-group">
                                                                                             <label>Task Id</label>
-                                                                                            <input type="text" class="form-control" name="utid">
+                                                                                            <input type="text" class="form-control" name="utid" required>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="col-md-2">
                                                                                         <div class="form-group">
                                                                                             <label>Subtask Id</label>
-                                                                                            <input type="text" class="form-control" name="usid">
+                                                                                            <input type="text" class="form-control" name="usid" required>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="col-md-2">
                                                                                         <div class="form-group">
                                                                                             <label>Completion</label>
-                                                                                            <input type="text" class="form-control" name="usubavg">
+                                                                                            <input type="text" class="form-control" name="usubavg" required>
                                                                                         </div>
                                                                                     </div>
                                                                                     
