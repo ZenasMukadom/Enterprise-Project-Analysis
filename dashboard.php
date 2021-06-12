@@ -277,7 +277,7 @@ if(isset($_POST['Submit']))
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="#" class="simple-text">
+                <a href="dashboard.php" class="simple-text">
                     Enterprise Project Analysis
                 </a>
             </div>

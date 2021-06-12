@@ -4,11 +4,11 @@ session_start();
 if(isset($_SESSION['user']))
 {
     session_destroy();
-    header('Location:multiplelogin.php');
+    header('Location:index.php');
 }
 else
 {
-    header('Location:multiplelogin.php');
+    header('Location:index.php');
 }
 
 
