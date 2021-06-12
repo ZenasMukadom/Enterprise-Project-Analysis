@@ -19,7 +19,7 @@ The Employee will receive the assigned work with the help of this system. In the
 ## Installation and Getting Started
 
 #### DB Connections 
- - [DB Connection File](includes/dbConnect.php) includes\dbConnect.php
+ - [DB Connection File](includes/dbConnect.php)
 ```php
 <?php
     $servername="localhost";
